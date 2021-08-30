@@ -4,7 +4,10 @@ body {
   color: white;
   font-family: "Gilroy";
   margin: 0px;
+  width: 95%;
+  min-height: 100vh;
 }
+
 @font-face {
   font-family: "Gilroy-Bold";
   src: url("Gilroy-Bold.ttf") format("truetype");
@@ -25,6 +28,7 @@ body {
   font-family: "Gilroy-Medium";
   src: url("Gilroy-Medium.ttf") format("truetype");
 }
+
 h1 {
   font-size: 97px;
   font-weight: bold;
@@ -77,7 +81,7 @@ a.menu {
   border-width: 1px;
 }
 footer {
-  display: grid;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -104,4 +108,82 @@ footer {
 }
 a {
   text-decoration: none;
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    padding: 60px;
+    margin: 0px;
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+  }
+  .heading {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: 65px;
+    font-weight: bold;
+    text-align: left;
+    line-height: 55px;
+    letter-spacing: -1.65px;
+    white-space: inherit;
+    width: 340px;
+    margin-top: 100px;
+    margin-bottom: 0px;
+  }
+  .para {
+    font-family: "Gilroy-bold";
+    margin-bottom: 0px;
+    font-size: 19px;
+    text-align: left;
+    line-height: 24px;
+    margin-top: 35px;
+    letter-spacing: 0px;
+    width: 320px;
+    white-space: pre-line;
+  }
+  footer {
+    justify-content: flex-start;
+  }
+  a.btn {
+    width: auto;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    text-align: left;
+    font-size: 18px;
+    letter-spacing: 0.3px;
+    line-height: 18px;
+    padding: 16px 28px;
+    cursor: none;
+  }
+  a.hid {
+    display: none;
+    visibility: hidden;
+  }
+  a.dwld {
+    font-size: 11px;
+    padding: 8px 26px;
+    cursor: none;
+    letter-spacing: 0px;
+    line-height: 18px;
+    white-space: nowrap;
+    border: 1px solidrgb(248, 248, 248);
+    border-radius: 22px;
+    outline: none;
+    margin-left: 36px;
+    margin-right: 0px;
+    width: auto;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 900px) {
+  .heading {
+    font-size: 83px;
+  }
 }
